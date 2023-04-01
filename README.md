@@ -34,8 +34,8 @@ To run the app locally, follow these steps:
 To customize the app, you can make changes to the following files:
 
 - `app.py`: This file contains the Flask app and the routes for the app.
-- `static/css/style.css`: This file contains the custom CSS for the app.
-- `static/js/main.js`: This file contains the JavaScript for the game.
+- `static/css/output.css`: This file contains the custom CSS for the app.
+- `static/js/game.js`: This file contains the JavaScript for the game.
 
 You can also add new images to the `static/img` folder and update the JavaScript code to use those images.
 
