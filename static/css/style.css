@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-image: url("../img/shattered-island.gif");
+}
+
+#container {
+  height: 65vh;
+  width: 65vh;
+}
+
+.card {
+  transition: all 0.4s ease-in-out;
+}
+
+.flip-animation {
+  transform: scaleX(-1);
+}
+
+.card:hover {
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */

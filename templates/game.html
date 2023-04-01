@@ -1,0 +1,26 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+Guess card!
+{% endblock  %}
+
+{% block body %}
+<div class="mx-auto mt-5">
+    {% for number in ['Choose a set','New game'] %}
+        <button id="start-game-btn" class="bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded w-40" 
+        onclick="startGame('{{number}}')">
+        {{ number }}
+        </button>
+    {% endfor %}
+</div>
+<div class="bg-sky-500 h-10 w-10 my-5 rounded place-self-center grid place-content-center">
+    <span id="counter" class="text-white text-2xl">0</span>
+</div>
+<div id="container" class="grid grid-cols-4 grid-rows-4 gap-5 place-self-center">
+
+</div>
+{% endblock  %}
+
+{% block script %}
+<script src="{{ url_for('static', filename='js/game.js') }}"></script>
+{% endblock  %}
