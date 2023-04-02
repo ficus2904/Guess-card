@@ -9,11 +9,18 @@ const urlParams = new URLSearchParams(window.location.search);
 const selectedOption = urlParams.get('option');
 let set = +selectedOption
 
-let startGame=(choose)=> window.location.href = choose == 'New game' ? `/game?option=${set}`: "/";
+const frontImages = Array.from({ length: 8 }, (_, i) => `${path}/set${set}/${i + 1}.webp`);
+const preloadedImages = frontImages.map(url => {
+  const img = new Image();
+  img.src = url;
+  return img;
+});
+
+let startGame = (choose) => window.location.href = choose == 'New game' ? `/game?option=${set}` : "/";
 
 const shuffleList = Array.from({ length: 8 }, (_, i) => i + 1).flatMap(x => [x, x]).sort(() => Math.random() - 0.5);
 for (let elem of shuffleList) {
-  let card = document.createElement("img");
+  let card = new Image();
   card.src = `${path}/cover${set}.webp`;
   card.dataset.back = `${path}/cover${set}.webp`;
   card.dataset.front = `${path}/set${set}/${elem}.webp`;
