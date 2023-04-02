@@ -42,7 +42,7 @@ You can also add new images to the `static/img` folder and update the JavaScript
 
 ## Credits
 
-This app was created by [your name]. The memory card game was inspired by [source of inspiration].
+This app was created by Dmitriy Barabash.
 
 ## License
 
