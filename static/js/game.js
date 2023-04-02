@@ -24,7 +24,7 @@ for (let elem of shuffleList) {
   card.src = `${path}/cover${set}.webp`;
   card.dataset.back = `${path}/cover${set}.webp`;
   card.dataset.front = `${path}/set${set}/${elem}.webp`;
-  card.classList.add('card', 'border-4', 'rounded');
+  card.classList.add('card');
   card.addEventListener('click', () => flipImage(card));
   container.appendChild(card);
 }

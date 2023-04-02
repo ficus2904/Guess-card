@@ -1,14 +1,18 @@
 body
     background-image: url("../img/shattered-island.gif")
 
+@media screen and (max-width: 970px)
+#container
+    height: 40vh
+    width: 40vh
 
+@media screen and (min-width: 970px)
 #container
     height: 65vh
     width: 65vh
 
 .card
     transition: all 0.4s ease-in-out
-
 
 .flip-animation
     transform: scaleX(-1)

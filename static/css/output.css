@@ -584,6 +584,10 @@ video {
   margin-left: 0.5rem;
 }
 
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .mt-20 {
   margin-top: 5rem;
 }
@@ -620,12 +624,19 @@ video {
   width: 1.25rem;
 }
 
+.w-60 {
+  width: 15rem;
+}
 .w-80 {
   width: 20rem;
 }
 
 .grid-cols-1 {
   grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.grid-cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
 .grid-cols-3 {
@@ -672,8 +683,8 @@ video {
   border-radius: 0.25rem;
 }
 
-.border-4 {
-  border-width: 4px;
+.border-3 {
+  border-width: 3px;
 }
 
 .bg-indigo-600 {
@@ -703,6 +714,11 @@ video {
 .text-2xl {
   font-size: 1.5rem;
   line-height: 2rem;
+}
+
+.text-5xl {
+  font-size: 3rem;
+  line-height: 1;
 }
 
 .text-lg {
@@ -739,26 +755,34 @@ video {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.form-radio {
+  grid-template-columns: 1fr 5fr;
+}
+
 body {
   background-image: url("../img/shattered-island.gif");
 }
 
-@media screen and (max-width: 970px) {
+@media screen and (max-width: 768px) {
   #container {
     height: 40vh;
     width: 40vh;
+    gap: 0.75rem;
   }
 }
 
-@media screen and (min-width: 970px) {
+@media screen and (min-width: 768px) {
   #container {
     height: 65vh;
     width: 65vh;
+    gap: 1.25rem;
   }
 }
 
 .card {
   transition: all 0.4s ease-in-out;
+  border-width: 2px;
+  border-radius: 0.25rem;
 }
 
 .flip-animation {

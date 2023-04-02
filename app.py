@@ -1,11 +1,11 @@
 from flask import Flask, render_template, Response, url_for, request
-import random 
 
 app = Flask(__name__)
 
 @app.route("/")
 def index():
-    return render_template("index.html")
+    context = {'1':'Evangelion', '2':'Harry Potter', '3':'Fullmetal Alchemist','4':'Lord of the Rings'}
+    return render_template("index.html",context=context)
 
 @app.route("/game")
 def game():
